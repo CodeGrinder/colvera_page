@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">window.liveSettings={
+    api_key:"5f5ab1fee75142f58cdbf08e1db30296",
+    variables_parser: function(text, fn) {
+        
+        text = text.replace(/\${stepCount}/g, function(match) {
+          return fn(match);
+        });
+        return text;
+    }
+};</script>
+    
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal GitHub Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage!</h1>
+        <p id="greeting">Hello, visitor!</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I am a developer passionate about coding and open-source projects. I love experimenting with new technologies and building innovative solutions.</p>
+            <button onclick="countClicks()">Click Me for a Surprise</button>
+            <div tx-attrs="aria-label" aria-label="{'You have completed <var>${stepCount}</var> of 3 steps'}" >${stepCount}</div>
+            <div tx-attrs="aria-label" aria-label="You have completed <var>1</var> of 3 steps" >line2</div>
+            <p id="message"></p>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            <ul>
+                <li>Project 1 - A cool tool for developers</li>
+                <li>Project 2 - An app to manage tasks effectively</li>
+                <li>Project 3 - A website for showcasing photography</li>
+                <li>Why are you attending Consensus?</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ by [Your Name]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
